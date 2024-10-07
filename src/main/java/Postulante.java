@@ -35,18 +35,18 @@ public class Postulante {
 
     public boolean asignarGradoEstudio(GradoEstudio gradoEstudio) {
         this.gradoEstudio = gradoEstudio;
-        return true; // Asignación exitosa
+        return true;
     }
 
     public boolean anularPostulacion(Postulacion postulacion) {
         for (int i = 0; i < indicePostulacion; i++) {
             if (postulaciones[i].equals(postulacion)) {
-                postulaciones[i].setAnulado(true); // Anular la postulacion
-                postulaciones[i].setFechaAnulacion(new Date()); // Establecer fecha de anulacion
-                return true; // Anulación exitosa
+                postulaciones[i].setAnulado(true);
+                postulaciones[i].setFechaAnulacion(new Date());
+                return true;
             }
         }
-        return false; // Si no se encontró la postulacion
+        return false;
     }
 
     public Postulacion[] getPostulaciones() {
