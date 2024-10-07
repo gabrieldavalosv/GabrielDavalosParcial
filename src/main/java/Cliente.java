@@ -27,6 +27,20 @@ public class Cliente {
         return false;
     }
 
+    public boolean eliminarOferta(Oferta oferta) {
+        for (int i = 0; i < indiceOferta; i++) {
+            if (ofertas[i].equals(oferta)) {
+                for (int j = i; j < indiceOferta - 1; j++) {
+                    ofertas[j] = ofertas[j + 1];
+                }
+                ofertas[indiceOferta - 1] = null;
+                indiceOferta--;
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void registrarContacto(String DNI, String nombres, String apellidos, String puesto) {
         this.contacto = new Contacto(DNI, nombres, apellidos, puesto);
     }

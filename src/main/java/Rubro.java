@@ -26,4 +26,6 @@ public class Rubro {
     public boolean isEstado() {
         return estado;
     }
+
+
 }
